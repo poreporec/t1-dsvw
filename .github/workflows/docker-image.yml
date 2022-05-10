@@ -50,7 +50,7 @@ jobs:
       run: sudo ./twistcli sandbox -u $PC_USER --p $PC_PASS --address $PC_CONSOLE_URL --output-file "sandbox.json" --analysis-duration 1m $IMAGE_NAME
 
     - name: Run Checkov for Terraform IAC file
-      id: bridgecrew_yaml
+      id: bridgecrew_tf
       uses: bridgecrewio/bridgecrew-action@master
       with:
         directory: ./deploy
