@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./twistcli coderepo scan --address $PC_CONSOLE_URL -u $PC_USER -p $PC_PASS --repository $GITHUB_REPOSITORY ./
+./twistcli coderepo scan --address $PC_CONSOLE_URL -u $PC_USER -p $PC_PASS --repository $GITHUB_REPOSITORY ./ --details
 scandetails=$(curl -k -u $PC_USER:$PC_PASS -H 'Content-Type: application/json' "$PC_CONSOLE_URL/api/v1/coderepos-ci?name=$GITHUB_REPOSITORY"|jq '.[-1]')
 scanresult=$(curl -k -u $PC_USER:$PC_PASS -H 'Content-Type: application/json' "$PC_CONSOLE_URL/api/v1/coderepos-ci?name=$GITHUB_REPOSITORY"|jq '.[-1].pass')
 
