@@ -55,7 +55,7 @@ jobs:
       with:
         directory: ./deploy
         soft_fail: true # optional: do not return an error code if there are failed checks
-        framework: terraform # optional: (choose from 'cloudformation', 'terraform', 'kubernetes', 'serverless', 'arm', 'terraform_plan', 'helm', 'dockerfile', 'secrets', 'json', 'all')
+        framework: terraform
         quiet: true
         output_format: cli # optional: the output format, one of: cli, json, junitxml, github_failed_only
         log_level: WARNING # optional: set log level. Default WARNING
